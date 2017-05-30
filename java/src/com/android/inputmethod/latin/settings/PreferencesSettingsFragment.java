@@ -61,8 +61,7 @@ public final class PreferencesSettingsFragment extends SubScreenFragment {
         if (!showEmojiKeyOption) {
             removePreference(Settings.PREF_SHOW_EMOJI_KEY);
         }
-        final boolean showVoiceKeyOption = res.getBoolean(
-                R.bool.config_enable_show_voice_key_option);
+        final boolean showVoiceKeyOption = false;
         if (!showVoiceKeyOption) {
             removePreference(Settings.PREF_VOICE_INPUT_KEY);
         }
