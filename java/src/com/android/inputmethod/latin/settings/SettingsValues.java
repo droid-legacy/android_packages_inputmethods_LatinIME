@@ -140,9 +140,7 @@ public class SettingsValues {
         mKeyPreviewPopupOn = Settings.readKeyPreviewPopupEnabled(prefs, res);
         mSlidingKeyInputPreviewEnabled = prefs.getBoolean(
                 DebugSettings.PREF_SLIDING_KEY_INPUT_PREVIEW, true);
-        mShowsVoiceInputKey = needsToShowVoiceInputKey(prefs, res)
-                && mInputAttributes.mShouldShowVoiceInputKey
-                && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
+        mShowsVoiceInputKey = false;
         mShowNumberRow = prefs.getBoolean(Settings.PREF_SHOW_NUMBER_ROW, false);
         mShowLongpressHints = prefs.getBoolean(Settings.PREF_SHOW_LONGPRESS_HINTS, true);
         mIncludesOtherImesInLanguageSwitchList = Settings.ENABLE_SHOW_LANGUAGE_SWITCH_KEY_SETTINGS
@@ -374,7 +372,7 @@ public class SettingsValues {
                     .remove(Settings.PREF_VOICE_MODE_OBSOLETE)
                     .apply();
         }
-        return prefs.getBoolean(Settings.PREF_VOICE_INPUT_KEY, true);
+        return prefs.getBoolean(Settings.PREF_VOICE_INPUT_KEY, false);
     }
 
     public String dump() {
