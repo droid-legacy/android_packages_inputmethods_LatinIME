@@ -56,8 +56,7 @@ public final class PreferencesSettingsFragment extends SubScreenFragment {
         // initialization method of these classes here. See {@link LatinIME#onCreate()}.
         RichInputMethodManager.init(context);
 
-        final boolean showVoiceKeyOption = res.getBoolean(
-                R.bool.config_enable_show_voice_key_option);
+        final boolean showVoiceKeyOption = false;
         if (!showVoiceKeyOption) {
             removePreference(Settings.PREF_VOICE_INPUT_KEY);
         }
