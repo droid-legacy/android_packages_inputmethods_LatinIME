@@ -24,7 +24,7 @@
     <include
         latin:keyboardLayout="@xml/key_styles_common" />
     <Row
-        latin:keyWidth="9.091%p"
+        latin:keyWidth="10%p"
     >
         <include
             latin:keyboardLayout="@xml/rowkeys_qwerty0" />
